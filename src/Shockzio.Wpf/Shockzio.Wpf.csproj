@@ -4,10 +4,31 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
+    <Year>$([System.DateTime]::UtcNow.ToString("yy"))</Year>
+    <Month>$([System.DateTime]::UtcNow.ToString("MM"))</Month>
+    <Date>$([System.DateTime]::UtcNow.ToString("dd"))</Date>
+    <Time>$([System.DateTime]::UtcNow.ToString("HHmm"))</Time>
+    <Version>$(Year).$(Month).$(Date).$(Time)</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>Shockzio.Wpf</PackageId>
+    <Title>Shockzio.Wpf</Title>
+    <Authors>shockz</Authors>
+    <Company>KYConsulting</Company>
+    <PackageProjectUrl>https://github.com/shockzinfinity/ShockzioWpf</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/shockzinfinity/ShockzioWpf</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>shockz;shockzio;wpf</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Global\" />
+    <Folder Include="Global\Converters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+    <PackageReference Include="WpfAutoGrid.Core" Version="1.5.1" />
   </ItemGroup>
 
 </Project>
