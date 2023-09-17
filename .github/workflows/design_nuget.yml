@@ -2,8 +2,8 @@ name: Publish Shockzio.Design
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     # - "release/**"
     tags:
       - "design-nuget*"

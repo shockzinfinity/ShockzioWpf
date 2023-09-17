@@ -2,8 +2,8 @@ name: Publish Shockzio.Wpf
 
 on:
   push:
-    branches:
-      - main
+    # branches:
+    #   - main
     # - "release/**"
     tags:
       - "Wpf-nuget*"
