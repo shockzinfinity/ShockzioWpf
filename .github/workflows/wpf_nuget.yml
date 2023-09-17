@@ -1,0 +1,30 @@
+name: Publish Shockzio.Wpf
+
+on:
+  push:
+    branches:
+      - main
+    # - "release/**"
+    tags:
+      - "Wpf-nuget*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+      - name: Install dependencies
+        run: dotnet restore ./src/Shockzio.Wpf/Shockzio.Wpf.csproj
+      - name: Build
+        run: dotnet build --configuration Release --no-restore ./src/Shockzio.Wpf/Shockzio.Wpf.csproj
+      - name: Publish
+        uses: alirezanet/publish-nuget@v3.0.1
+        with:
+          PROJECT_FILE_PATH: ./src/Shockzio.Wpf/Shockzio.Wpf.csproj
+          TAG_COMMIT: false
+          INCLUDE_SYMBOLS: false
+          NUGET_KEY: ${{secrets.NUGET_TOKEN}}
