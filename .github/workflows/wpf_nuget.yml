@@ -6,7 +6,7 @@ on:
     #   - main
     # - "release/**"
     tags:
-      - "Wpf-nuget*"
+      - "wpf-nuget*"
 
 jobs:
   build:
