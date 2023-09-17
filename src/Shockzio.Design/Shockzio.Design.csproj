@@ -3,14 +3,21 @@
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>disable</Nullable>
+    <Year>$([System.DateTime]::UtcNow.ToString("yy"))</Year>
+    <Month>$([System.DateTime]::UtcNow.ToString("MM"))</Month>
+    <Date>$([System.DateTime]::UtcNow.ToString("dd"))</Date>
+    <Time>$([System.DateTime]::UtcNow.ToString("HHmm"))</Time>
+    <Version>$(Year).$(Month).$(Date).$(Time)</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>Shockzio.Design</PackageId>
     <Title>Shockzio.Design</Title>
     <Authors>shockz</Authors>
     <Company>KYConsulting</Company>
     <PackageProjectUrl>https://github.com/shockzinfinity/ShockzioWpf</PackageProjectUrl>
     <RepositoryUrl>https://github.com/shockzinfinity/ShockzioWpf</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>shockz;shockzio;</PackageTags>
+    <PackageTags>shockz;shockzio;design;wpf</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
