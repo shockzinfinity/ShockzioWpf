@@ -4,6 +4,14 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Shockzio.Design</Title>
+    <Authors>shockz</Authors>
+    <Company>KYConsulting</Company>
+    <PackageProjectUrl>https://github.com/shockzinfinity/ShockzioWpf</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/shockzinfinity/ShockzioWpf</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>shockz;shockzio;</PackageTags>
   </PropertyGroup>
 
 </Project>
