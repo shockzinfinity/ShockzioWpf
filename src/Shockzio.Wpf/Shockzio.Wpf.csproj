@@ -22,10 +22,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Global\Converters\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
     <PackageReference Include="Shockzio.Design" Version="23.9.17.1124" />
