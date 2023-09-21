@@ -57,7 +57,7 @@ public class ShockzIcon : ContentControl
   private static void IconPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
   {
     ShockzIcon icon = (ShockzIcon)d;
-    string geometryData = GeometryConverter.GetData(icon.ToString());
+    string geometryData = GeometryConverter.GetData(icon.Icon.ToString());
 
     icon.Data = Geometry.Parse(geometryData);
     icon.Mode = IconMode.Icon;
@@ -178,6 +178,7 @@ public enum IconType
   FolderOpen,
   FolderRable,
   Maximize,
+  Restore,
   Resize,
   SelectAll,
   ArrowLeftBold,
@@ -219,6 +220,7 @@ public enum IconType
   Cash100,
   CashMulti,
   History,
+  Cloud,
 }
 
 public enum IconMode
