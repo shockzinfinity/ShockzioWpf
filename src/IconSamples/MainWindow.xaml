@@ -1,0 +1,22 @@
+﻿<Window x:Class="IconSamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IconSamples"
+        xmlns:shockz="clr-namespace:Shockzio.Wpf.Controls;assembly=Shockzio.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+  <shockz:ShockzPanel Background="Beige"
+                        Justify="SpaceAround"
+                        Orientation="Horizontal">
+    <shockz:ShockzPanel.Resources>
+      <Style TargetType="{x:Type shockz:ShockzIcon}">
+        <Setter Property="Background" Value="Blue"/>
+      </Style>
+    </shockz:ShockzPanel.Resources>
+    <shockz:ShockzIcon Icon="Close"/>
+    <shockz:ShockzIcon Icon="Minimize"/>
+    <shockz:ShockzIcon Icon="Maximize"/>
+  </shockz:ShockzPanel>
+</Window>
